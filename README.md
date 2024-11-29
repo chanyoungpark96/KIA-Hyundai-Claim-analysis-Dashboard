@@ -1,85 +1,66 @@
-# Kia and Hyundai Vehicle Warranty Claims Analysis Dashboard
+# **Kia and Hyundai Vehicle Warranty Claims Analysis Dashboard**
 
-## Project Overview
-This project focuses on analyzing warranty claims data for Kia and Hyundai vehicles from 2020 to 2024. Using the National Highway Traffic Safety Administration (NHTSA) dataset, the analysis aims to identify trends and actionable insights into defect types, repair durations, severity, and regional defect patterns. The data preprocessing was performed using Python, and the dashboard was created in Power BI.
-
----
+## Overview
+This project provides a comprehensive analysis of warranty claims for Kia and Hyundai vehicles using **Power BI tools**. By leveraging detailed data visualizations, the dashboard offers actionable insights into defect trends, repair durations, severity, and regional defect patterns. The project supports data-driven decision-making to enhance vehicle quality and customer satisfaction.
 
 ## Data Preparation
 The raw data was obtained from the NHTSA website:
 - **Source**: [NHTSA Datasets and APIs - Complaints](https://www.nhtsa.gov/nhtsa-datasets-and-apis#complaints)
 
-### Steps:
-1. **Dataset Format**: The raw data was in `.txt` format and included complaints data from 2020 to 2024.
-2. **Preprocessing**: Using Python, the following steps were applied:
-   - Converted text files into a structured tabular format (CSV).
-   - Filtered the data to include complaints related to Kia and Hyundai vehicles only.
-   - Created derived columns such as:
-     - `RepairDuration`: Difference between `DateFiled` and `RepairDate`.
-     - `SeverityScore`: Numerical value for severity based on complaint details.
-     - `MileageRange`: Categorized mileage into bins (e.g., 0-5k, 5k-10k).
-3. **Upload to Power BI**: The preprocessed dataset was imported into Power BI for further analysis.
+## Aim
+The primary goal is to analyze defect and warranty claim trends for Kia and Hyundai vehicles (2020–2024) and uncover actionable insights for quality improvement and operational efficiency.
 
-### Additional Data Transformation in Power BI:
-Using DAX, additional calculations were performed:
-- Created measures for high-severity complaint counts.
-- Implemented custom calculations for trends over time and defect distributions.
+## Installation
+To explore this project, ensure you have **Microsoft Power BI** installed on your system. Import the `.pbix` file to view and interact with the dashboard.
 
----
+## Tools Utilized
+* **Microsoft Power BI**
+* **Python** (for preprocessing)
+* **DAX Query**
+
+## Dashboard
+![Kia and Hyundai Vehicle Warranty Claims Analysis Dashboard](https://github.com/chanyoungpark96/KIA-Hyundai-Claim-analysis-Dashboard/blob/main/Kia%20and%20Hyundai%20claim%20analysis%20dashboard_Chanyoung%20Park.png)
 
 ## Dashboard Features
-The dashboard contains six distinct visualizations to address key analytical questions.
-
 ### 1. **Top Defect Types for Kia and Hyundai**
-   - **Type**: Bar Chart
-   - **Insights**: Highlights the most frequently reported defects for each manufacturer.
-   - **Actionable Insight**: Engine and electrical system defects dominate the claims, indicating potential areas for product improvement.
+   - Visualizes the most frequent defect types by manufacturer.
+   - **Insight**: Highlights engine and electrical system defects as critical areas.
 
 ### 2. **Impact of Mileage on Defect Severity**
-   - **Type**: Scatter Plot
-   - **Insights**: Shows the relationship between mileage and average severity score.
-   - **Actionable Insight**: High-severity complaints are more concentrated in lower mileage ranges, suggesting potential manufacturing or design defects.
+   - Analyzes the relationship between mileage and severity score.
+   - **Insight**: High-severity complaints are more prevalent at lower mileage ranges.
 
 ### 3. **Proportion of High-Severity Defects**
-   - **Type**: Donut Chart
-   - **Insights**: Breaks down high-severity defects by defect type.
-   - **Actionable Insight**: Engine defects account for the largest proportion of high-severity claims.
+   - Displays the distribution of high-severity defects by defect type.
+   - **Insight**: Engine defects dominate high-severity claims.
 
 ### 4. **Defect Severity Trends Over Time**
-   - **Type**: Line Chart
-   - **Insights**: Tracks severity trends from 2020 to 2024 for both manufacturers.
-   - **Actionable Insight**: Provides insight into how defect severity has evolved, helping to assess the impact of quality improvement initiatives.
+   - Tracks defect severity trends from 2020 to 2024.
+   - **Insight**: Severity scores are consistent over time, suggesting systemic issues.
 
 ### 5. **Regional Defect Patterns**
-   - **Type**: Tree Map
-   - **Insights**: Visualizes the frequency of complaints by state.
-   - **Actionable Insight**: California, Florida, and Texas report the highest number of complaints, pointing to regional trends in vehicle performance.
+   - Provides a regional breakdown of defect claims using a tree map.
+   - **Insight**: California, Texas, and Florida report the highest claim volumes.
 
 ### 6. **Repair Duration Distribution by Defect Type**
-   - **Type**: Box Plot
-   - **Insights**: Compares the distribution of repair durations for different defect types.
-   - **Actionable Insight**: Certain defect types (e.g., Parking Brake) have significantly longer repair times, highlighting potential supply chain or technical challenges.
+   - Compares repair durations for different defect types.
+   - **Insight**: Certain defect types, such as parking brakes, have prolonged repair times.
 
----
-## Insights and Recommendations
-1. **Focus on Engine Defects**: Engine-related issues are the most frequent and severe, requiring targeted investigation.
-2. **Address Regional Trends**: States like California and Texas show high claim volumes; localized manufacturing or environmental factors may play a role.
-3. **Optimize Repair Processes**: Prolonged repair durations for specific defect types should be addressed by streamlining parts supply chains.
-4. **Monitor Severity Trends**: Regular monitoring of severity trends can help measure the success of quality improvement initiatives.
+## Business Performance Analysis
+This project identifies critical trends and patterns in defect claims, enabling manufacturers to:
+- Optimize repair workflows.
+- Focus on high-severity and frequent defect types.
+- Investigate regional trends to address localized issues.
 
----
+## Project Learnings
+- **Interactive Dashboards**: Created an interactive and dynamic dashboard for vehicle claim analysis.
+- **Data Preparation**: Preprocessed raw data using Python, with advanced calculations performed in Power BI using DAX.
+- **Advanced Visualization**: Leveraged Power BI visuals, including bar charts, donut charts, scatter plots, tree maps, and line charts.
+- **Analysis Features**:
+  - Drill-down capabilities for defect type and manufacturer analysis.
+  - Custom filters for mileage, severity, and year-wise trends.
 
-## Tools Used
-- **Data Preparation**: Python (Pandas, NumPy)
-- **Visualization**: Power BI
-- **Dataset Source**: NHTSA Complaints Dataset (2020–2024)
+## Conclusion
+The **Kia and Hyundai Warranty Claims Dashboard** empowers stakeholders with an intuitive platform for analyzing vehicle warranty claims. By identifying high-priority defect types and repair inefficiencies, manufacturers can implement targeted quality improvements and enhance customer satisfaction.
 
----
-
-## How to Use
-1. Open the `dashboard.pbix` file in Power BI.
-2. Interact with the visualizations to explore specific trends and insights.
-3. Apply filters (e.g., Manufacturer, Defect Type) for a customized view.
-
----
 
